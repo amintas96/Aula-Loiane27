@@ -1,6 +1,6 @@
 package application;
 
-import entities.Lampada;
+import entities.ContaCorrente;
 
 public class Program {
 
@@ -8,14 +8,10 @@ public class Program {
 
 		
 		
-		Lampada lam = new Lampada("Renew", true);
+	ContaCorrente cc = new ContaCorrente(1234, 1000.50f, false, 500);
 		
 		
-		System.out.println("A lampada está ligada? " + lam.getLigada());
-		
-		lam.desligarLampada();
-		System.out.println();
-		lam.statusLampada();
+	cc.saque(1050);
 		
 	}
 	

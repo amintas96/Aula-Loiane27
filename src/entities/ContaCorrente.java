@@ -69,21 +69,22 @@ public class ContaCorrente {
 			this.saldo += limite;
 
 			if (saque > this.saldo) {
+				this.saldo -= limite;
 
-				System.out.println("Impossivel realizar o saque, pois o limite é de  " + this.getSaldo());
+				System.out.println("Impossivel realizar o saque, pois o limite é de  " + this.getSaldo()
+						+ " e o limite do check especial é de " + this.getLimite());
 
 			} else {
 
 				this.setSaldo(this.getSaldo() - saque);
-				System.out.println("Foi realizado o saque de " + saque + " e o saldo remanecente ficou de " + this.getSaldo()); 
+
+				System.out.println(
+						"Foi realizado o saque de " + saque + " e o saldo remanecente ficou de " + this.getSaldo());
 			}
 
 		}
-			
 
-		}
-
-	
+	}
 
 	public void depositar(double dinheiro) {
 
@@ -114,7 +115,7 @@ public class ContaCorrente {
 			this.saldo += limite;
 			System.out.println();
 
-			System.out.print(", tornando seu limite de " + this.getSaldo());
+			System.out.println(", tornando seu limite de " + this.getSaldo());
 		} else {
 
 			System.out.println("Saldo atual é de " + this.getSaldo());

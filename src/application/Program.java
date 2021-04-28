@@ -9,17 +9,25 @@ public class Program {
 	public static void main(String[] args) {
 
 		Scanner sc = new Scanner(System.in);
+
 		
-		
-		
+
+		ContaCorrente cc = new ContaCorrente(1234, 1000.50f, true, 500);
+
 		double dinheiro = sc.nextDouble();
-		 double saque = sc.nextDouble();
-
-		ContaCorrente cc = new ContaCorrente(1234, 1000.50f, true, 0);
-
 		cc.depositar(dinheiro);
+
+		cc.consultarSaldo();
+		double saque = sc.nextDouble();
 		cc.saque(saque);
 
+
+
+		
+
+		
+		
+		
 	}
 
 }
